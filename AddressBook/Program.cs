@@ -9,6 +9,11 @@ namespace AddressBook
 
             ListingPeople LP=new ListingPeople();
             LP.CreateContacts();
+            LP.EditContact();
+            LP.Display();
+            
+
+
 
 
         }
