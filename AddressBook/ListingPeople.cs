@@ -116,7 +116,24 @@ namespace AddressBook
             Console.ReadKey();
         }
 
-       
+        public void DeleteContact()    
+        {
+            Console.WriteLine("Enter the first name of the person you would like to remove.");
+            string Remove = Console.ReadLine();
+            foreach (var person in addressBook.ToList())
+            {
+                if (person.FirstName == Remove)
+                {
+                    addressBook.Remove(person);
+                    Console.WriteLine("{0}Contact is deleted",person.FirstName);
+                }
+                else
+                {
+                    Console.WriteLine("Contact is not present");
+                }
+            }
+                Console.ReadKey();
+        }
         
     }
 }

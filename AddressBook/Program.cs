@@ -11,7 +11,7 @@ namespace AddressBook
             LP.CreateContacts();
             LP.EditContact();
             LP.Display();
-            
+            LP.DeleteContact();
 
 
 
