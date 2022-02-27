@@ -8,6 +8,10 @@ namespace AddressBook
 {
     public class ListingPeople
     {
+        public static Dictionary<string, List<ListingPeople>> City = new Dictionary<string, List<ListingPeople>>();
+        public static Dictionary<string, List<ListingPeople>> State = new Dictionary<string, List<ListingPeople>>();
+        public List<ListingPeople> stateList;
+        public List<ListingPeople> cityList;
         public List<ListingPeople> people;
         public ListingPeople()
         {
@@ -203,6 +207,35 @@ namespace AddressBook
                 Console.WriteLine("Found person \"{0}\" in Address Book \"{1}\" , residing in State {2}", i.firstName, key, i.state);
             }
         }
+        public static void DisplayCityorState()
+        {
+            Console.WriteLine("Enter 1-To view City list\n Enter 2-To view State list");
+            int citystate = Convert.ToInt32(Console.ReadLine());
+            if (citystate == 1)
+            {
+                foreach (var i in City)
+                {
+                    Console.WriteLine("Display List for City: {0}\n", i.Key);
+                    foreach (var j in i.Value)
+                    {
+                        Console.WriteLine("Found person \"{0} {1}\" , residing in City {2}", j.firstName, j.lastName, j.city);
+                    }
+
+
+                }
+            }
+            else
+            {
+                foreach (var a in State)
+                {
+                    Console.WriteLine("Display List for State: {0}\n", a.Key);
+                    foreach (var b in a.Value)
+                    {
+                        Console.WriteLine("Found person \"{0} {1}\" , residing in State {2}", b.firstName, b.lastName, b.state);
+                    }
+
+                }
+            }
 
 
 
@@ -213,7 +246,7 @@ namespace AddressBook
 
 
 
-    }
+        }
 
 }
 
