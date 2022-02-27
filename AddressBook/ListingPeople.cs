@@ -186,6 +186,23 @@ namespace AddressBook
 
             }
         }
+        public static void StoreCityList(string key, List<ListingPeople> cityList, string city)
+        {
+            List<ListingPeople> CityList = cityList.FindAll(a => a.city.ToLower() == city);
+            foreach (var i in CityList)
+            {
+                Console.WriteLine("Found person \"{0}\" in Address Book \"{1}\" , residing in City {2}", i.firstName, key, i.city);
+            }
+        }
+        //Display Person names found in given State
+        public static void StoreStateList(string key, List<ListingPeople> stateList, string state)
+        {
+            List<ListingPeople> StateList = stateList.FindAll(x => x.state.ToLower() == state);
+            foreach (var i in StateList)
+            {
+                Console.WriteLine("Found person \"{0}\" in Address Book \"{1}\" , residing in State {2}", i.firstName, key, i.state);
+            }
+        }
 
 
 
