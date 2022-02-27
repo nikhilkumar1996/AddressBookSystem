@@ -8,6 +8,10 @@ namespace AddressBook
 {
     public class ListingPeople
     {
+        public static Dictionary<string, List<ListingPeople>> City = new Dictionary<string, List<ListingPeople>>();
+        public static Dictionary<string, List<ListingPeople>> State = new Dictionary<string, List<ListingPeople>>();
+        public List<ListingPeople> stateList;
+        public List<ListingPeople> cityList;
         public List<ListingPeople> people;
         public ListingPeople()
         {
