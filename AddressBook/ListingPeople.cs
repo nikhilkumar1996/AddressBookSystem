@@ -40,26 +40,81 @@ namespace AddressBook
         //Getting the user details
         public void GetCustomer()
         {
-
+            int contact = 0;
             ListingPeople person = new ListingPeople(firstName, lastName, phoneNum, address, city, state, zipCode, emailId);
-            if (people.Count == 0)
+            if (contact == 0)
             {
+
                 people.Add(person);
-            }
-            else
-            {
-                ListingPeople people = this.people.Find(a => a.firstName.Equals(firstName));
-                if (people == null)
+                if (State.ContainsKey(state))
                 {
-                    ListingPeople p = new ListingPeople(firstName, lastName, address, city, state, phoneNum, zipCode, emailId);
-                    this.people.Add(p);
+                    List<ListingPeople> existing = State[state];
+                    existing.Add(person);
+
                 }
                 else
                 {
-                    Console.WriteLine("-------Record is already exists-------");
-                    Console.WriteLine("Modify the details which has duplicate name");
-                    Modify();
+                    stateList = new List<ListingPeople>();
+                    stateList.Add(person);
+                    State.Add(state, stateList);
+
                 }
+                if (City.ContainsKey(city))
+                {
+                    List<ListingPeople> existing = City[city];
+                    existing.Add(person);
+
+                }
+                else
+                {
+                    cityList = new List<ListingPeople>();
+                    cityList.Add(person);
+                    City.Add(city, cityList);
+
+                }
+                contact++;
+            }
+            else if (contact != 0)
+            {
+                //Checking duplicates
+                ListingPeople addressBookSystems = people.Find(x => x.firstName.Equals(firstName));
+                if (addressBookSystems == null)
+                {
+                    person = new ListingPeople(firstName, lastName, address, city, state, zipCode, phoneNum, emailId);
+                    people.Add(person);
+                    if (State.ContainsKey(state))
+                    {
+                        List<ListingPeople> existing = State[state];
+                        existing.Add(person);
+
+                    }
+                    else
+                    {
+                        stateList = new List<ListingPeople>();
+                        stateList.Add(person);
+                        State.Add(state, stateList);
+
+                    }
+                    if (City.ContainsKey(city))
+                    {
+                        List<ListingPeople> existing = City[city];
+                        existing.Add(person);
+
+                    }
+                    else
+                    {
+                        cityList = new List<ListingPeople>();
+                        cityList.Add(person);
+                        City.Add(city, cityList);
+
+                    }
+                    contact++;
+                }
+                else
+                {
+                    Console.WriteLine("This person already exists in your AddressBook!");
+                }
+
             }
         }
 
@@ -247,6 +302,7 @@ namespace AddressBook
 
 
         }
+    }
 
 }
 
