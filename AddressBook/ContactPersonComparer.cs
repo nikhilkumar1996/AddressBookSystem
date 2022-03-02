@@ -30,7 +30,7 @@ namespace AddressBook
                 case sortBy.state:
                     return x.state.CompareTo(y.state);
                 case sortBy.zip:
-                    return x.zipCode.CompareTo(y.zipCode);
+                    return x.zip.CompareTo(y.zip);
                 default: break;
 
             }
