@@ -314,18 +314,85 @@ namespace AddressBook
                 }
             }
         }
+        //sorts based on city name
+        public static void SortBasedOnCity(Dictionary<string, List<ListingPeople>> addressBook)
+        {
 
+            SortedList<string, ListingPeople> sorted;
+            foreach (KeyValuePair<string, List<ListingPeople>> kvp in addressBook)
+            {
+                Console.WriteLine("\n--------Displaying Sorted contact based on city  in address book: {0}-------\n", kvp.Key);
+                sorted = new SortedList<string, ListingPeople>();
+                foreach (var member in kvp.Value)
+                {
+                    sorted.Add(member.city, member);
+                }
+                foreach (var member in sorted)
+                {
+                    Console.WriteLine(member.Value.ToString());
 
+                }
 
+            }
+        }
 
+        //sorts based on State name
+        public static void SortBasedOnState(Dictionary<string, List<ListingPeople>> addressBook)
+        {
 
+            SortedList<string, ListingPeople> sorted;
+            foreach (KeyValuePair<string, List<ListingPeople>> kvp in addressBook)
+            {
+                Console.WriteLine("\n--------Displaying Sorted contact based on State  in address book: {0}-------\n", kvp.Key);
+                sorted = new SortedList<string, ListingPeople>();
+                foreach (var member in kvp.Value)
+                {
+                    sorted.Add(member.state, member);
+                }
+                foreach (var member in sorted)
+                {
+                    Console.WriteLine(member.Value.ToString());
 
+                }
 
+            }
+        }
+        //sorts based on zipcode
+        public static void SortBasedOnZipCode(Dictionary<string, List<ListingPeople>> addressBook)
+        {
 
+            SortedList<string, ListingPeople> sorted;
+            foreach (KeyValuePair<string, List<ListingPeople>> kvp in addressBook)
+            {
+                Console.WriteLine("\n--------Displaying Sorted contact based on State  in address book: {0}-------\n", kvp.Key);
+                sorted = new SortedList<string, ListingPeople>();
+                foreach (var member in kvp.Value)
+                {
+                    sorted.Add(member.zipCode, member);
+                }
+                foreach (var member in sorted)
+                {
+                    Console.WriteLine(member.Value.ToString());
 
+                }
+            }
+        }
+        
 
 
     }
 
+
 }
+
+
+
+
+
+
+
+
+
+
+
 
