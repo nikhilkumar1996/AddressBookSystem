@@ -57,7 +57,7 @@ namespace AddressBook
                 }
                 Console.WriteLine("1.To modify the details");
                 Console.WriteLine("2.To remove the details");
-                Console.WriteLine("3.city or state");
+                Console.WriteLine("3.Exit from Loop");
                 int option = Convert.ToInt32(Console.ReadLine());
                 switch (option)
                 {
@@ -70,29 +70,6 @@ namespace AddressBook
                         ListingPeople.RemovePeople();
                         Console.WriteLine(" ");
                         ListingPeople.Display();
-                        break;
-                    case 3:
-                        Console.WriteLine("Enter 1-To Search a person through a City");
-                        Console.WriteLine("Enter 2-To Search a person through a State");
-                        Console.WriteLine("Enter 3-To view a person by state list or city list");
-                        int opt = Convert.ToInt32(Console.ReadLine());
-                        switch (opt)
-                        {
-
-                            case 1:
-                                SearchAddress(opt);
-                                break;
-                            case 2:
-                                SearchAddress(opt);
-                                break;
-                            case 3:
-                                ListingPeople.DisplayCityorState();
-
-                                break;
-                            default:
-                                Console.WriteLine("Invalid Option!");
-                                break;
-                        }
                         break;
                 }
                 //Checking the address book name is already exist or not
@@ -119,10 +96,13 @@ namespace AddressBook
             Console.WriteLine("Enter 2-To Search a person through a State");
             Console.WriteLine("Enter 3-To view a person by state list or city list");
             Console.WriteLine("Enter 4-Sort Contact People");
+            Console.WriteLine("Enter 5-Sort based on city");
+            Console.WriteLine("Enter 6-Sort based on State");
+            Console.WriteLine("Enter 7-Sort based on zipcode");
             int opt = Convert.ToInt32(Console.ReadLine());
+
             switch (opt)
             {
-
                 case 1:
                     SearchAddress(opt);
                     break;
@@ -135,10 +115,21 @@ namespace AddressBook
                 case 4:
                     ListingPeople.SortContactPerson(addressBook);
                     break;
+                case 5:
+                    ListingPeople.SortBasedOnCity(addressBook);
+                    break;
+                case 6:
+                    ListingPeople.SortBasedOnState(addressBook);
+                    break;
+                case 7:
+                    ListingPeople.SortBasedOnZipCode(addressBook);
+                    break;
                 default:
                     Console.WriteLine("Invalid Option!");
                     break;
             }
+
+
             //Search the person through city or state
             static void SearchAddress(int option)
             {
