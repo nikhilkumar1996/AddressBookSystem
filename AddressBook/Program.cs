@@ -48,6 +48,7 @@ namespace AddressBook
 
                     Console.Write("Enter EmailId: ");
                     string EmailId = Console.ReadLine();
+                    //Calling the getcustomer method and store it dictionary
                     ListingPeople.GetCustomer(FirstName, LastName, PhoneNumber, Addresses, City, State, ZipCode, EmailId);
                     noOfContact--;
                     //addressBook.Add(addressbookname, ListingPeople.people);
@@ -94,22 +95,51 @@ namespace AddressBook
                         }
                         break;
                 }
+                //Checking the address book name is already exist or not
                 if (addressBook.ContainsKey(addressbookname))
                 {
                     Console.WriteLine("Existing address book name");
                     return;
                 }
+                //If not add it in dictionary
                 else
                 {
                     addressBook.Add(addressbookname, ListingPeople.people);
                 }
                 noOfBooks++;
+                //Displaying the address book names
                 foreach (KeyValuePair<string, List<ListingPeople>> addr in addressBook)
                 {
                     Console.WriteLine("The address Books are:{0}", addr.Key);
 
                 }
             }
+            //Searching and sorting operations based on city,state,name,zipcode
+            Console.WriteLine("Enter 1-To Search a person through a City");
+            Console.WriteLine("Enter 2-To Search a person through a State");
+            Console.WriteLine("Enter 3-To view a person by state list or city list");
+            Console.WriteLine("Enter 4-Sort Contact People");
+            int opt = Convert.ToInt32(Console.ReadLine());
+            switch (opt)
+            {
+
+                case 1:
+                    SearchAddress(opt);
+                    break;
+                case 2:
+                    SearchAddress(opt);
+                    break;
+                case 3:
+                    ListingPeople.DisplayCityorState();
+                    break;
+                case 4:
+                    ListingPeople.SortContactPerson(addressBook);
+                    break;
+                default:
+                    Console.WriteLine("Invalid Option!");
+                    break;
+            }
+            //Search the person through city or state
             static void SearchAddress(int option)
             {
                 string city, state;

@@ -38,7 +38,7 @@ namespace AddressBook
 
         }
         //Getting the user details
-        public void GetCustomer()
+        public void GetCustomer(string firstName, string lastName, string address, string city, string state, string zip, string phoneNumber, string email)
         {
             int contact = 0;
             ListingPeople person = new ListingPeople(firstName, lastName, phoneNum, address, city, state, zipCode, emailId);
@@ -245,6 +245,7 @@ namespace AddressBook
 
             }
         }
+        //Display Person names found in given City
         public static void StoreCityList(string key, List<ListingPeople> cityList, string city)
         {
             List<ListingPeople> CityList = cityList.FindAll(a => a.city.ToLower() == city);
@@ -291,17 +292,39 @@ namespace AddressBook
 
                 }
             }
-
-
-
-
-
-
-
-
-
-
         }
+        /// <param name="addressBook"></param>
+        //Sort the contact details in address book based on firstname
+        public static void SortContactPerson(Dictionary<string, List<ListingPeople>> addressBook)
+        {
+
+            SortedList<string, ListingPeople> sorted;
+            foreach (KeyValuePair<string, List<ListingPeople>> kvp in addressBook)
+            {
+                Console.WriteLine("\nDisplaying sorted Contact Person Details in address book: {0}\n", kvp.Key);
+                sorted = new SortedList<string, ListingPeople>();
+                foreach (var member in kvp.Value)
+                {
+                    sorted.Add(member.firstName, member);
+                }
+                foreach (var member in sorted)
+                {
+                    Console.WriteLine(member.Value.ToString());
+
+                }
+            }
+        }
+
+
+
+
+
+
+
+
+
+
+
     }
 
 }
