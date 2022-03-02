@@ -343,7 +343,7 @@ namespace AddressBook
             SortedList<string, ListingPeople> sorted;
             foreach (KeyValuePair<string, List<ListingPeople>> kvp in addressBook)
             {
-                Console.WriteLine("\n--------Displaying Sorted contact based on State  in address book: {0}-------\n", kvp.Key);
+                Console.WriteLine("\nDisplaying Sorted contact based on State  in address book: {0}\n", kvp.Key);
                 sorted = new SortedList<string, ListingPeople>();
                 foreach (var member in kvp.Value)
                 {
