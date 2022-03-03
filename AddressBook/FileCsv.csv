@@ -1,3 +1,7 @@
 firstName,lastName,Address,city,state,zip,phoneNumber,email
+<<<<<<< HEAD
 Shivam,Singh,Near SwamiSmarth Temple,pimpri,Maharashtra,765321,9876534526,Shivam123@gmail.com
+=======
+Rohan,Kumar,"downstreet,sector A,Chandigarh",chandigarh,punjab,654367,9872625237,rohan123@gmail.com
+>>>>>>> UC14CsvOperations
 

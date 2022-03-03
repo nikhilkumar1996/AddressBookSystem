@@ -1,10 +1,15 @@
 {
+<<<<<<< HEAD
   "AddressBook 3": [
+=======
+  "AddressBook 4": [
+>>>>>>> UC14CsvOperations
     {
       "stateList": null,
       "cityList": null,
       "ContactArray": null,
       "contact": 0,
+<<<<<<< HEAD
       "firstName": "Shivam",
       "lastName": "Singh",
       "Address": "Near SwamiSmarth Temple",
@@ -13,6 +18,16 @@
       "zip": "765321",
       "phoneNumber": "9876534526",
       "email": "Shivam123@gmail.com"
+=======
+      "firstName": "Rohan",
+      "lastName": "Kumar",
+      "Address": "downstreet,sector A,Chandigarh",
+      "city": "chandigarh",
+      "state": "punjab",
+      "zip": "654367",
+      "phoneNumber": "9872625237",
+      "email": "rohan123@gmail.com"
+>>>>>>> UC14CsvOperations
     }
   ]
 }

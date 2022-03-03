@@ -1,4 +1,9 @@
+<<<<<<< HEAD
 Address Book: AddressBook 1
 Name: Nikhil Kumar	Address: SimcoColony,Talegaon	City: Pune 	 State: Maharashtra	Pincode: 410507 	 Phone Number: 7809867589	Email Id: nike123@gmail.com
 Name: rohan singal	Address: sector2,street A,GT road	City: Amritsar 	 State: punjab	Pincode: 768945 	 Phone Number: 7456893245	Email Id: rohan123@yahoo.com
+=======
+Address Book: AdressBook 3
+Name: Shivam Singh	Address: Near SwamiSmarth Temple	City: pimpri 	 State: Maharashtra	Pincode: 874830 	 Phone Number: 8946478393	Email Id: shiv123@gmail.com
+>>>>>>> UC14CsvOperations
 

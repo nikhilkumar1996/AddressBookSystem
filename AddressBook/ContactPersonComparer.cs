@@ -24,7 +24,7 @@ namespace AddressBook
             switch (compareByFields)
             {
                 case sortBy.firstName:
-                    return x.firstName.CompareTo(y.firstName);
+                    return x.firstName.CompareTo(y.firstName) ;
                 case sortBy.city:
                     return x.city.CompareTo(y.city);
                 case sortBy.state:

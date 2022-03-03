@@ -79,7 +79,7 @@ namespace AddressBook
         //Display Details
         public void Display(List<ListingPeople> ContactArray, int N)
         {
-            Console.WriteLine("---------Address Book Contains---------");
+            Console.WriteLine("Address Book Contains");
             int i;
             for (i = 0; i < N; i++)
             {
@@ -99,7 +99,7 @@ namespace AddressBook
             int option = Convert.ToInt32(Console.ReadLine());
             foreach (KeyValuePair<string, List<ListingPeople>> kvp in numberNames)
             {
-                Console.WriteLine("********Displaying sorted Contact Person Details in address book: {0}********", kvp.Key);
+                Console.WriteLine("Displaying sorted Contact Person Details in address book: {0}", kvp.Key);
                 //Store value of Dictionary in a list
                 List<ListingPeople> listAddressBook = kvp.Value;
                 //Create object for Class that implements IComparer<AddressBookSystem>  
