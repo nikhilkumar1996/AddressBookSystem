@@ -1,0 +1,18 @@
+{
+  "AddressBook 3": [
+    {
+      "stateList": null,
+      "cityList": null,
+      "ContactArray": null,
+      "contact": 0,
+      "firstName": "Shivam",
+      "lastName": "Singh",
+      "Address": "Near SwamiSmarth Temple",
+      "city": "pimpri",
+      "state": "Maharashtra",
+      "zip": "765321",
+      "phoneNumber": "9876534526",
+      "email": "Shivam123@gmail.com"
+    }
+  ]
+}
