@@ -79,7 +79,7 @@ namespace AddressBook
         //Display Details
         public void Display(List<ListingPeople> ContactArray, int N)
         {
-            Console.WriteLine("---------Address Book Contains---------");
+            Console.WriteLine("Address Book Contains");
             int i;
             for (i = 0; i < N; i++)
             {
@@ -99,7 +99,7 @@ namespace AddressBook
             int option = Convert.ToInt32(Console.ReadLine());
             foreach (KeyValuePair<string, List<ListingPeople>> kvp in numberNames)
             {
-                Console.WriteLine("********Displaying sorted Contact Person Details in address book: {0}********", kvp.Key);
+                Console.WriteLine("Displaying sorted Contact Person Details in address book: {0}", kvp.Key);
                 //Store value of Dictionary in a list
                 List<ListingPeople> listAddressBook = kvp.Value;
                 //Create object for Class that implements IComparer<AddressBookSystem>  
@@ -142,6 +142,10 @@ namespace AddressBook
             Console.WriteLine("Enter 2-to Seach a person through a State");
             Console.WriteLine("Enter 3-to view people  in City list or State list");
             Console.WriteLine("Enter 4-to Sort Contact people in Address Book");
+            Console.WriteLine("Enter 5-To Write AddressBook in File");
+            Console.WriteLine("Enter 6-To Read a File");
+            Console.WriteLine("Enter 7-Perform Csv Operations");
+            Console.WriteLine("Enter 8-Read and Write Operation in Json File");
             int option = Convert.ToInt32(Console.ReadLine());
             switch (option)
             {
@@ -157,11 +161,25 @@ namespace AddressBook
                 case 4:
                     SortContactPerson();
                     break;
+                case 5:
+                    FileOperations.GetDictionary(numberNames);
+                    break;
+                case 6:
+                    FileOperations.ReadAddressBook();
+                    break;
+                case 7:
+                    CsvOperation.CSVOperation(numberNames, 1);
+                    break;
+                case 8:
+                    CsvOperation.CSVOperation(numberNames, 2);
+                    break;
 
                 default:
                     Console.WriteLine("Invalid Option!");
                     break;
             }
+
+
         }
         //Display City list or State list from Dictionary
         public static void DisplayCityorState()

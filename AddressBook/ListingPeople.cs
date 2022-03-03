@@ -89,7 +89,7 @@ namespace AddressBook
             else if (contact != 0)
             {
                 //Check if element already present in List
-                ListingPeople addressBookSystems = ContactArray.Find(x => x.firstName.Equals(firstName));
+                ListingPeople addressBookSystems = ContactArray.Find(x => x.firstName.Equals(firstName)) ;
                 if (addressBookSystems == null)
                 {
                     bookSystem = new ListingPeople(firstName, lastName, Address, city, state, zip, phoneNumber, email);

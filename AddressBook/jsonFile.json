@@ -1,0 +1,18 @@
+{
+  "AddressBook 4": [
+    {
+      "stateList": null,
+      "cityList": null,
+      "ContactArray": null,
+      "contact": 0,
+      "firstName": "Rohan",
+      "lastName": "Kumar",
+      "Address": "downstreet,sector A,Chandigarh",
+      "city": "chandigarh",
+      "state": "punjab",
+      "zip": "654367",
+      "phoneNumber": "9872625237",
+      "email": "rohan123@gmail.com"
+    }
+  ]
+}

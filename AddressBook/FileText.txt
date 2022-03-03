@@ -1,11 +1,3 @@
-﻿﻿using System;
-using System.Collections.Generic;
-using System.Text;
+Address Book: AdressBook 3
+Name: Shivam Singh	Address: Near SwamiSmarth Temple	City: pimpri 	 State: Maharashtra	Pincode: 874830 	 Phone Number: 8946478393	Email Id: shiv123@gmail.com
 
-namespace AddressBook
-{
-    class AddressText
-    {
-        
-    }
-}
