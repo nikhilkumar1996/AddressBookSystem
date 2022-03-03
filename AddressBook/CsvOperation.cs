@@ -5,21 +5,13 @@ using System.Collections.Generic;
 using System.Globalization;
 using System.Linq;
 using System.Text;
-<<<<<<< HEAD
-using System.Text.Json;
-=======
->>>>>>> UC14CsvOperations
 using System.Threading.Tasks;
 
 namespace AddressBook
 {
     public class CsvOperation
     {
-<<<<<<< HEAD
-        public static void CSVOperation(Dictionary<string, List<ListingPeople>> addressbooknames,int option)
-=======
         public static void CSVOperation(Dictionary<string, List<ListingPeople>> addressbooknames, int option)
->>>>>>> UC14CsvOperations
         {
             //Store Csv File path in a string
             string csvFilePath = @"E:\github\AddressBookSystem\AddressBook\FileCsv.csv";
